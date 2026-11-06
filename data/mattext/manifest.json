@@ -1,0 +1,345 @@
+{
+  "builder_sha256": "64621902cdcc83510e4f1d0bd03e8af916599e5a8dec18e12366ba2c37d919fb",
+  "created_at_utc": "2026-10-30T07:50:00.933878+00:00",
+  "experiment_cells": {
+    "cross_representation_memory_sources": [
+      "composition",
+      "crystal_text_llm"
+    ],
+    "cross_representation_query_targets": [
+      "composition",
+      "atom_sequences_plusplus",
+      "slices",
+      "local_env",
+      "crystal_text_llm"
+    ],
+    "negative_controls": [
+      "task_matched_shuffled_verified_episodes",
+      "unrelated_task_verified_episodes"
+    ],
+    "within_representation_prequential": [
+      "composition",
+      "atom_sequences_plusplus",
+      "slices",
+      "local_env",
+      "crystal_text_llm"
+    ]
+  },
+  "matched_cohorts": [
+    {
+      "excluded_materials": 8,
+      "matched_materials": 10979,
+      "missing_representation_counts": {
+        "local_env": 8
+      },
+      "source_materials": 10987,
+      "source_prefix": "kvrh",
+      "task": "mattext_bulk_modulus_log10_gpa"
+    },
+    {
+      "excluded_materials": 8,
+      "matched_materials": 10979,
+      "missing_representation_counts": {
+        "local_env": 8
+      },
+      "source_materials": 10987,
+      "source_prefix": "gvrh",
+      "task": "mattext_shear_modulus_log10_gpa"
+    },
+    {
+      "excluded_materials": 0,
+      "matched_materials": 18928,
+      "missing_representation_counts": {},
+      "source_materials": 18928,
+      "source_prefix": "perovskites",
+      "task": "mattext_perovskite_formation_energy"
+    }
+  ],
+  "protocol": {
+    "aligned_material_ids_across_representations": true,
+    "current_answer_hidden_before_prediction": true,
+    "exposure_feedback_revealed_after_prediction": true,
+    "frozen_test_feedback_revealed_during_evaluation": false,
+    "frozen_test_memory_writes": false,
+    "matched_cohort_requires_all_selected_representations": true,
+    "official_matbench_folds": true,
+    "static_library_uses_only_same_fold_training_records": true,
+    "test_labels_recovered_from_other_folds_for_scoring_only": true,
+    "test_targets_stored_only_in_gold_files": true
+  },
+  "release_id": "matrecall-mattext",
+  "representations": [
+    {
+      "group": "category",
+      "name": "composition"
+    },
+    {
+      "group": "category_and_cell",
+      "name": "atom_sequences_plusplus"
+    },
+    {
+      "group": "bonding_without_explicit_coordinates",
+      "name": "slices"
+    },
+    {
+      "group": "local_geometry",
+      "name": "local_env"
+    },
+    {
+      "group": "explicit_geometry",
+      "name": "crystal_text_llm"
+    }
+  ],
+  "sampling": {
+    "exposure_cases_per_task_fold": 16,
+    "folds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "frozen_cases_per_task_fold": 8,
+    "seed": 0,
+    "static_cases_per_task_fold": 256
+  },
+  "sampling_revision": "mattext-sampling",
+  "source_dataset": "n0w0f/MatText",
+  "source_dataset_revision": "1b31583fd9198f73d2fbd5287d2048205f4a3a03",
+  "source_license": "MIT",
+  "source_sha256": {
+    "benchmark_parquet/gvrh-test-matbench/fold_0/0000.parquet": "476621254d5a70b30b7c011b05e102b3af7e874cb14fbc8b940e5c1dcf47b34e",
+    "benchmark_parquet/gvrh-test-matbench/fold_1/0000.parquet": "f75e72e1a11b42068a371d75ef91e0a72cbb716968e488d0b8f500e27ac4c031",
+    "benchmark_parquet/gvrh-test-matbench/fold_2/0000.parquet": "dcddaa1fc3a77ba997858ce71ec491de6e1d6498cedbf6bda30f05ed32574572",
+    "benchmark_parquet/gvrh-test-matbench/fold_3/0000.parquet": "6392752a3aa213589c62f9464cbccfc6e572f0edd4682b62563100f7c44f5c9f",
+    "benchmark_parquet/gvrh-test-matbench/fold_4/0000.parquet": "2a3df82e5b5f2f80f808de247d4a61dd191b34ad02b608641da24aece1ccf2ce",
+    "benchmark_parquet/gvrh-train-matbench/fold_0/0000.parquet": "4a83c4af2b6f6dd4ad3f686634a3dd66952cf740b42ae84d0bfb820f9854bdb5",
+    "benchmark_parquet/gvrh-train-matbench/fold_1/0000.parquet": "9b01a8f32b1762cd09cb6294098bea3b5267937bcc66df00bc7401ec83da18bf",
+    "benchmark_parquet/gvrh-train-matbench/fold_2/0000.parquet": "3fb11f14fadd6fe5c8d5c83a4611dec2499f1b5cd1093a23148d609b700dc233",
+    "benchmark_parquet/gvrh-train-matbench/fold_3/0000.parquet": "f789612dac62acaaefc3c59868c7534e3d4884035eab66b8569186d0d519d1ef",
+    "benchmark_parquet/gvrh-train-matbench/fold_4/0000.parquet": "544f6f9988dd8910015359c0e455593734db21e85294ef6459b9b29edba9927a",
+    "benchmark_parquet/kvrh-test-matbench/fold_0/0000.parquet": "ceabfcf26d69ce2b758678499984239538f68e8f7ca5d51be4e806023eaa4b4f",
+    "benchmark_parquet/kvrh-test-matbench/fold_1/0000.parquet": "18565cec85b5b742a74ff9a0786bc6cb3f7ebe9b92b2ebd31012dfecc1b45b70",
+    "benchmark_parquet/kvrh-test-matbench/fold_2/0000.parquet": "aa3e471a50c42b6cc1f8178905544e2565fb1a9c28d7880da119d38d075b9fec",
+    "benchmark_parquet/kvrh-test-matbench/fold_3/0000.parquet": "8a2a8eca1647ee0aaaebb6436c6044e84719e8020fce3db2804941d652a2f1e8",
+    "benchmark_parquet/kvrh-test-matbench/fold_4/0000.parquet": "79715c4a65a8d0a36c47dcaced1b10be821469cdad3f1045779602288f261edb",
+    "benchmark_parquet/kvrh-train-matbench/fold_0/0000.parquet": "3e6c950094a55de14a38724fab5c7766cc57f3de8058ea48e5183ca3ddeb28ef",
+    "benchmark_parquet/kvrh-train-matbench/fold_1/0000.parquet": "0c15cc36d6f7fcf5b8b5ece6d1a7e137eb355bbbfdd4a3cec5fa334754959bf6",
+    "benchmark_parquet/kvrh-train-matbench/fold_2/0000.parquet": "1f82aaef61d725ca764c791fda23bf669045fd4690141f378e1d41c7a4107aca",
+    "benchmark_parquet/kvrh-train-matbench/fold_3/0000.parquet": "d6a7f33deab6d974b6e5e33823564227817d8438cb80bc2b70b736cd2617f90c",
+    "benchmark_parquet/kvrh-train-matbench/fold_4/0000.parquet": "261d54adedc018541abfaae82a1ef92213b9b78b9349df29e9f9f925a852758a",
+    "benchmark_parquet/perovskites-test-matbench/fold_0/0000.parquet": "5e0591c2e3505d7f140d6b09ff5b9544f1a254b9aeca01bba5847b54cdd6cc45",
+    "benchmark_parquet/perovskites-test-matbench/fold_1/0000.parquet": "f95b16b3cd421aaf64329f18661906ce5eee5cf0beda39233f0fcfb1f9a41079",
+    "benchmark_parquet/perovskites-test-matbench/fold_2/0000.parquet": "5c31deabd323939ef78d199498f2d41d4743037d5598aafb02b7fa5fb9710c15",
+    "benchmark_parquet/perovskites-test-matbench/fold_3/0000.parquet": "9bd587a7dab53092e02637f2bdac0e84d34d851854e8ae94305670dbc7a94874",
+    "benchmark_parquet/perovskites-test-matbench/fold_4/0000.parquet": "58346bc252c8fcbb0c85e4cd4ee4463052b3e146bf396b778b510afed2a0d84e",
+    "benchmark_parquet/perovskites-train-matbench/fold_0/0000.parquet": "a586e772208ea91ed8c7d15e103b737f5c7e1745acd1247bff95dbbdca262262",
+    "benchmark_parquet/perovskites-train-matbench/fold_1/0000.parquet": "bb12e9a8bdc57ac3f3c1c33a7b0b463027b6f48317d43b8c18cd95b1476ff3f8",
+    "benchmark_parquet/perovskites-train-matbench/fold_2/0000.parquet": "91310c9b6b480e1a27a5a65310c8411f31f35a3448ee9c5ae6abb414a1784b97",
+    "benchmark_parquet/perovskites-train-matbench/fold_3/0000.parquet": "3048546c4f047de637e5c3dbff44d9ebb2286f2827908342a47ffa9fd0004385",
+    "benchmark_parquet/perovskites-train-matbench/fold_4/0000.parquet": "b5679ef2a08f82d83d9fef17c470e766e2bd55a0767ad9d809d01345b5844dc5"
+  },
+  "status": "frozen",
+  "task_fold_records": [
+    {
+      "exposure_cases": 16,
+      "fold": 0,
+      "frozen_test_cases": 8,
+      "matched_test_rows": 2196,
+      "matched_train_rows": 8783,
+      "relative_path": "tasks/mattext_bulk_modulus_log10_gpa/fold_0",
+      "source_prefix": "kvrh",
+      "source_test_rows": 2198,
+      "source_train_rows": 8789,
+      "static_cases": 256,
+      "task": "mattext_bulk_modulus_log10_gpa"
+    },
+    {
+      "exposure_cases": 16,
+      "fold": 1,
+      "frozen_test_cases": 8,
+      "matched_test_rows": 2197,
+      "matched_train_rows": 8782,
+      "relative_path": "tasks/mattext_bulk_modulus_log10_gpa/fold_1",
+      "source_prefix": "kvrh",
+      "source_test_rows": 2198,
+      "source_train_rows": 8789,
+      "static_cases": 256,
+      "task": "mattext_bulk_modulus_log10_gpa"
+    },
+    {
+      "exposure_cases": 16,
+      "fold": 2,
+      "frozen_test_cases": 8,
+      "matched_test_rows": 2196,
+      "matched_train_rows": 8783,
+      "relative_path": "tasks/mattext_bulk_modulus_log10_gpa/fold_2",
+      "source_prefix": "kvrh",
+      "source_test_rows": 2197,
+      "source_train_rows": 8790,
+      "static_cases": 256,
+      "task": "mattext_bulk_modulus_log10_gpa"
+    },
+    {
+      "exposure_cases": 16,
+      "fold": 3,
+      "frozen_test_cases": 8,
+      "matched_test_rows": 2196,
+      "matched_train_rows": 8783,
+      "relative_path": "tasks/mattext_bulk_modulus_log10_gpa/fold_3",
+      "source_prefix": "kvrh",
+      "source_test_rows": 2197,
+      "source_train_rows": 8790,
+      "static_cases": 256,
+      "task": "mattext_bulk_modulus_log10_gpa"
+    },
+    {
+      "exposure_cases": 16,
+      "fold": 4,
+      "frozen_test_cases": 8,
+      "matched_test_rows": 2194,
+      "matched_train_rows": 8785,
+      "relative_path": "tasks/mattext_bulk_modulus_log10_gpa/fold_4",
+      "source_prefix": "kvrh",
+      "source_test_rows": 2197,
+      "source_train_rows": 8790,
+      "static_cases": 256,
+      "task": "mattext_bulk_modulus_log10_gpa"
+    },
+    {
+      "exposure_cases": 16,
+      "fold": 0,
+      "frozen_test_cases": 8,
+      "matched_test_rows": 2196,
+      "matched_train_rows": 8783,
+      "relative_path": "tasks/mattext_shear_modulus_log10_gpa/fold_0",
+      "source_prefix": "gvrh",
+      "source_test_rows": 2198,
+      "source_train_rows": 8789,
+      "static_cases": 256,
+      "task": "mattext_shear_modulus_log10_gpa"
+    },
+    {
+      "exposure_cases": 16,
+      "fold": 1,
+      "frozen_test_cases": 8,
+      "matched_test_rows": 2197,
+      "matched_train_rows": 8782,
+      "relative_path": "tasks/mattext_shear_modulus_log10_gpa/fold_1",
+      "source_prefix": "gvrh",
+      "source_test_rows": 2198,
+      "source_train_rows": 8789,
+      "static_cases": 256,
+      "task": "mattext_shear_modulus_log10_gpa"
+    },
+    {
+      "exposure_cases": 16,
+      "fold": 2,
+      "frozen_test_cases": 8,
+      "matched_test_rows": 2196,
+      "matched_train_rows": 8783,
+      "relative_path": "tasks/mattext_shear_modulus_log10_gpa/fold_2",
+      "source_prefix": "gvrh",
+      "source_test_rows": 2197,
+      "source_train_rows": 8790,
+      "static_cases": 256,
+      "task": "mattext_shear_modulus_log10_gpa"
+    },
+    {
+      "exposure_cases": 16,
+      "fold": 3,
+      "frozen_test_cases": 8,
+      "matched_test_rows": 2196,
+      "matched_train_rows": 8783,
+      "relative_path": "tasks/mattext_shear_modulus_log10_gpa/fold_3",
+      "source_prefix": "gvrh",
+      "source_test_rows": 2197,
+      "source_train_rows": 8790,
+      "static_cases": 256,
+      "task": "mattext_shear_modulus_log10_gpa"
+    },
+    {
+      "exposure_cases": 16,
+      "fold": 4,
+      "frozen_test_cases": 8,
+      "matched_test_rows": 2194,
+      "matched_train_rows": 8785,
+      "relative_path": "tasks/mattext_shear_modulus_log10_gpa/fold_4",
+      "source_prefix": "gvrh",
+      "source_test_rows": 2197,
+      "source_train_rows": 8790,
+      "static_cases": 256,
+      "task": "mattext_shear_modulus_log10_gpa"
+    },
+    {
+      "exposure_cases": 16,
+      "fold": 0,
+      "frozen_test_cases": 8,
+      "matched_test_rows": 3786,
+      "matched_train_rows": 15142,
+      "relative_path": "tasks/mattext_perovskite_formation_energy/fold_0",
+      "source_prefix": "perovskites",
+      "source_test_rows": 3786,
+      "source_train_rows": 15142,
+      "static_cases": 256,
+      "task": "mattext_perovskite_formation_energy"
+    },
+    {
+      "exposure_cases": 16,
+      "fold": 1,
+      "frozen_test_cases": 8,
+      "matched_test_rows": 3786,
+      "matched_train_rows": 15142,
+      "relative_path": "tasks/mattext_perovskite_formation_energy/fold_1",
+      "source_prefix": "perovskites",
+      "source_test_rows": 3786,
+      "source_train_rows": 15142,
+      "static_cases": 256,
+      "task": "mattext_perovskite_formation_energy"
+    },
+    {
+      "exposure_cases": 16,
+      "fold": 2,
+      "frozen_test_cases": 8,
+      "matched_test_rows": 3786,
+      "matched_train_rows": 15142,
+      "relative_path": "tasks/mattext_perovskite_formation_energy/fold_2",
+      "source_prefix": "perovskites",
+      "source_test_rows": 3786,
+      "source_train_rows": 15142,
+      "static_cases": 256,
+      "task": "mattext_perovskite_formation_energy"
+    },
+    {
+      "exposure_cases": 16,
+      "fold": 3,
+      "frozen_test_cases": 8,
+      "matched_test_rows": 3785,
+      "matched_train_rows": 15143,
+      "relative_path": "tasks/mattext_perovskite_formation_energy/fold_3",
+      "source_prefix": "perovskites",
+      "source_test_rows": 3785,
+      "source_train_rows": 15143,
+      "static_cases": 256,
+      "task": "mattext_perovskite_formation_energy"
+    },
+    {
+      "exposure_cases": 16,
+      "fold": 4,
+      "frozen_test_cases": 8,
+      "matched_test_rows": 3785,
+      "matched_train_rows": 15143,
+      "relative_path": "tasks/mattext_perovskite_formation_energy/fold_4",
+      "source_prefix": "perovskites",
+      "source_test_rows": 3785,
+      "source_train_rows": 15143,
+      "static_cases": 256,
+      "task": "mattext_perovskite_formation_energy"
+    }
+  ],
+  "tasks": [
+    "mattext_bulk_modulus_log10_gpa",
+    "mattext_shear_modulus_log10_gpa",
+    "mattext_perovskite_formation_energy"
+  ]
+}

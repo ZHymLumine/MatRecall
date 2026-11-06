@@ -1,0 +1,13 @@
+{
+  "protocol": "matrecall-online-episodic-ablation",
+  "selection_timing": "fixed before episodic-only inference",
+  "selection_rule": "Cover crystal regression with positive and negative prior Full-MatRecall effects, structured phase classification, synthesis numeric prediction, synthesis generation, and experimental binary outcome prediction.",
+  "tasks": [
+    "bulk_modulus_kv",
+    "mbj_bandgap",
+    "composition_to_phase_assemblage",
+    "target_and_precursors_to_heating_conditions",
+    "target_composition_to_precursor_set",
+    "raccuglia_crystallization_success"
+  ]
+}

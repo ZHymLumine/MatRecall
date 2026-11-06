@@ -1,0 +1,480 @@
+{
+  "alphas": [
+    0.0,
+    0.2,
+    0.4,
+    0.5,
+    0.6,
+    0.8,
+    1.0
+  ],
+  "builder_sha256": "90da798c41eb030e4007557a40487a48420e0d50a77c939a7ded29ac30d1f357",
+  "component_standardization": [
+    {
+      "category_mean": 6.711039319357242,
+      "category_std": 1.7774713460657479,
+      "fold": 0,
+      "geometry_mean": 0.1264284622528848,
+      "geometry_std": 0.05755726529691205
+    },
+    {
+      "category_mean": 6.813404635189328,
+      "category_std": 1.9167189490697465,
+      "fold": 1,
+      "geometry_mean": 0.12743902563758275,
+      "geometry_std": 0.059664829308195194
+    },
+    {
+      "category_mean": 6.700873910342149,
+      "category_std": 1.8073125835231962,
+      "fold": 2,
+      "geometry_mean": 0.13074847045204363,
+      "geometry_std": 0.06179565174993329
+    },
+    {
+      "category_mean": 6.826677463927438,
+      "category_std": 1.8771949884524572,
+      "fold": 3,
+      "geometry_mean": 0.124986550590797,
+      "geometry_std": 0.056013374377463974
+    },
+    {
+      "category_mean": 6.675079256337562,
+      "category_std": 1.8988055003168185,
+      "fold": 4,
+      "geometry_mean": 0.12853932797057901,
+      "geometry_std": 0.05907631363834816
+    }
+  ],
+  "created_at_utc": "2026-10-30T07:50:03.600095+00:00",
+  "protocol": {
+    "alpha_is_composition_weight": true,
+    "components_standardized_on_static_training_sample_only": true,
+    "current_answer_hidden_before_prediction": true,
+    "exposure_feedback_revealed_after_prediction": true,
+    "frozen_test_memory_writes": false,
+    "same_material_ids_across_alpha_and_representation": true
+  },
+  "release_id": "matrecall-mattext-control",
+  "representations": [
+    {
+      "group": "category",
+      "name": "composition"
+    },
+    {
+      "group": "explicit_geometry",
+      "name": "crystal_text_llm"
+    }
+  ],
+  "sampling": {
+    "exposure_cases_per_task_fold": 16,
+    "folds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "frozen_cases_per_task_fold": 8
+  },
+  "source_release_id": "matrecall-mattext",
+  "source_release_manifest_sha256": "570fbc068ab0e05e3fdaee66d195e3bac5bc371d21fcc6eb2be8e7996ea1c5bc",
+  "source_task": "mattext_bulk_modulus_log10_gpa",
+  "status": "frozen",
+  "task_fold_records": [
+    {
+      "alpha": 0.0,
+      "coordinate_weight": 1.0,
+      "exposure_cases": 16,
+      "fold": 0,
+      "frozen_test_cases": 8,
+      "relative_path": "tasks/mattext_coordinate_category_alpha_0p0/fold_0",
+      "source_task": "mattext_bulk_modulus_log10_gpa",
+      "static_cases": 256,
+      "task": "mattext_coordinate_category_alpha_0p0"
+    },
+    {
+      "alpha": 0.2,
+      "coordinate_weight": 0.8,
+      "exposure_cases": 16,
+      "fold": 0,
+      "frozen_test_cases": 8,
+      "relative_path": "tasks/mattext_coordinate_category_alpha_0p2/fold_0",
+      "source_task": "mattext_bulk_modulus_log10_gpa",
+      "static_cases": 256,
+      "task": "mattext_coordinate_category_alpha_0p2"
+    },
+    {
+      "alpha": 0.4,
+      "coordinate_weight": 0.6,
+      "exposure_cases": 16,
+      "fold": 0,
+      "frozen_test_cases": 8,
+      "relative_path": "tasks/mattext_coordinate_category_alpha_0p4/fold_0",
+      "source_task": "mattext_bulk_modulus_log10_gpa",
+      "static_cases": 256,
+      "task": "mattext_coordinate_category_alpha_0p4"
+    },
+    {
+      "alpha": 0.5,
+      "coordinate_weight": 0.5,
+      "exposure_cases": 16,
+      "fold": 0,
+      "frozen_test_cases": 8,
+      "relative_path": "tasks/mattext_coordinate_category_alpha_0p5/fold_0",
+      "source_task": "mattext_bulk_modulus_log10_gpa",
+      "static_cases": 256,
+      "task": "mattext_coordinate_category_alpha_0p5"
+    },
+    {
+      "alpha": 0.6,
+      "coordinate_weight": 0.4,
+      "exposure_cases": 16,
+      "fold": 0,
+      "frozen_test_cases": 8,
+      "relative_path": "tasks/mattext_coordinate_category_alpha_0p6/fold_0",
+      "source_task": "mattext_bulk_modulus_log10_gpa",
+      "static_cases": 256,
+      "task": "mattext_coordinate_category_alpha_0p6"
+    },
+    {
+      "alpha": 0.8,
+      "coordinate_weight": 0.19999999999999996,
+      "exposure_cases": 16,
+      "fold": 0,
+      "frozen_test_cases": 8,
+      "relative_path": "tasks/mattext_coordinate_category_alpha_0p8/fold_0",
+      "source_task": "mattext_bulk_modulus_log10_gpa",
+      "static_cases": 256,
+      "task": "mattext_coordinate_category_alpha_0p8"
+    },
+    {
+      "alpha": 1.0,
+      "coordinate_weight": 0.0,
+      "exposure_cases": 16,
+      "fold": 0,
+      "frozen_test_cases": 8,
+      "relative_path": "tasks/mattext_coordinate_category_alpha_1p0/fold_0",
+      "source_task": "mattext_bulk_modulus_log10_gpa",
+      "static_cases": 256,
+      "task": "mattext_coordinate_category_alpha_1p0"
+    },
+    {
+      "alpha": 0.0,
+      "coordinate_weight": 1.0,
+      "exposure_cases": 16,
+      "fold": 1,
+      "frozen_test_cases": 8,
+      "relative_path": "tasks/mattext_coordinate_category_alpha_0p0/fold_1",
+      "source_task": "mattext_bulk_modulus_log10_gpa",
+      "static_cases": 256,
+      "task": "mattext_coordinate_category_alpha_0p0"
+    },
+    {
+      "alpha": 0.2,
+      "coordinate_weight": 0.8,
+      "exposure_cases": 16,
+      "fold": 1,
+      "frozen_test_cases": 8,
+      "relative_path": "tasks/mattext_coordinate_category_alpha_0p2/fold_1",
+      "source_task": "mattext_bulk_modulus_log10_gpa",
+      "static_cases": 256,
+      "task": "mattext_coordinate_category_alpha_0p2"
+    },
+    {
+      "alpha": 0.4,
+      "coordinate_weight": 0.6,
+      "exposure_cases": 16,
+      "fold": 1,
+      "frozen_test_cases": 8,
+      "relative_path": "tasks/mattext_coordinate_category_alpha_0p4/fold_1",
+      "source_task": "mattext_bulk_modulus_log10_gpa",
+      "static_cases": 256,
+      "task": "mattext_coordinate_category_alpha_0p4"
+    },
+    {
+      "alpha": 0.5,
+      "coordinate_weight": 0.5,
+      "exposure_cases": 16,
+      "fold": 1,
+      "frozen_test_cases": 8,
+      "relative_path": "tasks/mattext_coordinate_category_alpha_0p5/fold_1",
+      "source_task": "mattext_bulk_modulus_log10_gpa",
+      "static_cases": 256,
+      "task": "mattext_coordinate_category_alpha_0p5"
+    },
+    {
+      "alpha": 0.6,
+      "coordinate_weight": 0.4,
+      "exposure_cases": 16,
+      "fold": 1,
+      "frozen_test_cases": 8,
+      "relative_path": "tasks/mattext_coordinate_category_alpha_0p6/fold_1",
+      "source_task": "mattext_bulk_modulus_log10_gpa",
+      "static_cases": 256,
+      "task": "mattext_coordinate_category_alpha_0p6"
+    },
+    {
+      "alpha": 0.8,
+      "coordinate_weight": 0.19999999999999996,
+      "exposure_cases": 16,
+      "fold": 1,
+      "frozen_test_cases": 8,
+      "relative_path": "tasks/mattext_coordinate_category_alpha_0p8/fold_1",
+      "source_task": "mattext_bulk_modulus_log10_gpa",
+      "static_cases": 256,
+      "task": "mattext_coordinate_category_alpha_0p8"
+    },
+    {
+      "alpha": 1.0,
+      "coordinate_weight": 0.0,
+      "exposure_cases": 16,
+      "fold": 1,
+      "frozen_test_cases": 8,
+      "relative_path": "tasks/mattext_coordinate_category_alpha_1p0/fold_1",
+      "source_task": "mattext_bulk_modulus_log10_gpa",
+      "static_cases": 256,
+      "task": "mattext_coordinate_category_alpha_1p0"
+    },
+    {
+      "alpha": 0.0,
+      "coordinate_weight": 1.0,
+      "exposure_cases": 16,
+      "fold": 2,
+      "frozen_test_cases": 8,
+      "relative_path": "tasks/mattext_coordinate_category_alpha_0p0/fold_2",
+      "source_task": "mattext_bulk_modulus_log10_gpa",
+      "static_cases": 256,
+      "task": "mattext_coordinate_category_alpha_0p0"
+    },
+    {
+      "alpha": 0.2,
+      "coordinate_weight": 0.8,
+      "exposure_cases": 16,
+      "fold": 2,
+      "frozen_test_cases": 8,
+      "relative_path": "tasks/mattext_coordinate_category_alpha_0p2/fold_2",
+      "source_task": "mattext_bulk_modulus_log10_gpa",
+      "static_cases": 256,
+      "task": "mattext_coordinate_category_alpha_0p2"
+    },
+    {
+      "alpha": 0.4,
+      "coordinate_weight": 0.6,
+      "exposure_cases": 16,
+      "fold": 2,
+      "frozen_test_cases": 8,
+      "relative_path": "tasks/mattext_coordinate_category_alpha_0p4/fold_2",
+      "source_task": "mattext_bulk_modulus_log10_gpa",
+      "static_cases": 256,
+      "task": "mattext_coordinate_category_alpha_0p4"
+    },
+    {
+      "alpha": 0.5,
+      "coordinate_weight": 0.5,
+      "exposure_cases": 16,
+      "fold": 2,
+      "frozen_test_cases": 8,
+      "relative_path": "tasks/mattext_coordinate_category_alpha_0p5/fold_2",
+      "source_task": "mattext_bulk_modulus_log10_gpa",
+      "static_cases": 256,
+      "task": "mattext_coordinate_category_alpha_0p5"
+    },
+    {
+      "alpha": 0.6,
+      "coordinate_weight": 0.4,
+      "exposure_cases": 16,
+      "fold": 2,
+      "frozen_test_cases": 8,
+      "relative_path": "tasks/mattext_coordinate_category_alpha_0p6/fold_2",
+      "source_task": "mattext_bulk_modulus_log10_gpa",
+      "static_cases": 256,
+      "task": "mattext_coordinate_category_alpha_0p6"
+    },
+    {
+      "alpha": 0.8,
+      "coordinate_weight": 0.19999999999999996,
+      "exposure_cases": 16,
+      "fold": 2,
+      "frozen_test_cases": 8,
+      "relative_path": "tasks/mattext_coordinate_category_alpha_0p8/fold_2",
+      "source_task": "mattext_bulk_modulus_log10_gpa",
+      "static_cases": 256,
+      "task": "mattext_coordinate_category_alpha_0p8"
+    },
+    {
+      "alpha": 1.0,
+      "coordinate_weight": 0.0,
+      "exposure_cases": 16,
+      "fold": 2,
+      "frozen_test_cases": 8,
+      "relative_path": "tasks/mattext_coordinate_category_alpha_1p0/fold_2",
+      "source_task": "mattext_bulk_modulus_log10_gpa",
+      "static_cases": 256,
+      "task": "mattext_coordinate_category_alpha_1p0"
+    },
+    {
+      "alpha": 0.0,
+      "coordinate_weight": 1.0,
+      "exposure_cases": 16,
+      "fold": 3,
+      "frozen_test_cases": 8,
+      "relative_path": "tasks/mattext_coordinate_category_alpha_0p0/fold_3",
+      "source_task": "mattext_bulk_modulus_log10_gpa",
+      "static_cases": 256,
+      "task": "mattext_coordinate_category_alpha_0p0"
+    },
+    {
+      "alpha": 0.2,
+      "coordinate_weight": 0.8,
+      "exposure_cases": 16,
+      "fold": 3,
+      "frozen_test_cases": 8,
+      "relative_path": "tasks/mattext_coordinate_category_alpha_0p2/fold_3",
+      "source_task": "mattext_bulk_modulus_log10_gpa",
+      "static_cases": 256,
+      "task": "mattext_coordinate_category_alpha_0p2"
+    },
+    {
+      "alpha": 0.4,
+      "coordinate_weight": 0.6,
+      "exposure_cases": 16,
+      "fold": 3,
+      "frozen_test_cases": 8,
+      "relative_path": "tasks/mattext_coordinate_category_alpha_0p4/fold_3",
+      "source_task": "mattext_bulk_modulus_log10_gpa",
+      "static_cases": 256,
+      "task": "mattext_coordinate_category_alpha_0p4"
+    },
+    {
+      "alpha": 0.5,
+      "coordinate_weight": 0.5,
+      "exposure_cases": 16,
+      "fold": 3,
+      "frozen_test_cases": 8,
+      "relative_path": "tasks/mattext_coordinate_category_alpha_0p5/fold_3",
+      "source_task": "mattext_bulk_modulus_log10_gpa",
+      "static_cases": 256,
+      "task": "mattext_coordinate_category_alpha_0p5"
+    },
+    {
+      "alpha": 0.6,
+      "coordinate_weight": 0.4,
+      "exposure_cases": 16,
+      "fold": 3,
+      "frozen_test_cases": 8,
+      "relative_path": "tasks/mattext_coordinate_category_alpha_0p6/fold_3",
+      "source_task": "mattext_bulk_modulus_log10_gpa",
+      "static_cases": 256,
+      "task": "mattext_coordinate_category_alpha_0p6"
+    },
+    {
+      "alpha": 0.8,
+      "coordinate_weight": 0.19999999999999996,
+      "exposure_cases": 16,
+      "fold": 3,
+      "frozen_test_cases": 8,
+      "relative_path": "tasks/mattext_coordinate_category_alpha_0p8/fold_3",
+      "source_task": "mattext_bulk_modulus_log10_gpa",
+      "static_cases": 256,
+      "task": "mattext_coordinate_category_alpha_0p8"
+    },
+    {
+      "alpha": 1.0,
+      "coordinate_weight": 0.0,
+      "exposure_cases": 16,
+      "fold": 3,
+      "frozen_test_cases": 8,
+      "relative_path": "tasks/mattext_coordinate_category_alpha_1p0/fold_3",
+      "source_task": "mattext_bulk_modulus_log10_gpa",
+      "static_cases": 256,
+      "task": "mattext_coordinate_category_alpha_1p0"
+    },
+    {
+      "alpha": 0.0,
+      "coordinate_weight": 1.0,
+      "exposure_cases": 16,
+      "fold": 4,
+      "frozen_test_cases": 8,
+      "relative_path": "tasks/mattext_coordinate_category_alpha_0p0/fold_4",
+      "source_task": "mattext_bulk_modulus_log10_gpa",
+      "static_cases": 256,
+      "task": "mattext_coordinate_category_alpha_0p0"
+    },
+    {
+      "alpha": 0.2,
+      "coordinate_weight": 0.8,
+      "exposure_cases": 16,
+      "fold": 4,
+      "frozen_test_cases": 8,
+      "relative_path": "tasks/mattext_coordinate_category_alpha_0p2/fold_4",
+      "source_task": "mattext_bulk_modulus_log10_gpa",
+      "static_cases": 256,
+      "task": "mattext_coordinate_category_alpha_0p2"
+    },
+    {
+      "alpha": 0.4,
+      "coordinate_weight": 0.6,
+      "exposure_cases": 16,
+      "fold": 4,
+      "frozen_test_cases": 8,
+      "relative_path": "tasks/mattext_coordinate_category_alpha_0p4/fold_4",
+      "source_task": "mattext_bulk_modulus_log10_gpa",
+      "static_cases": 256,
+      "task": "mattext_coordinate_category_alpha_0p4"
+    },
+    {
+      "alpha": 0.5,
+      "coordinate_weight": 0.5,
+      "exposure_cases": 16,
+      "fold": 4,
+      "frozen_test_cases": 8,
+      "relative_path": "tasks/mattext_coordinate_category_alpha_0p5/fold_4",
+      "source_task": "mattext_bulk_modulus_log10_gpa",
+      "static_cases": 256,
+      "task": "mattext_coordinate_category_alpha_0p5"
+    },
+    {
+      "alpha": 0.6,
+      "coordinate_weight": 0.4,
+      "exposure_cases": 16,
+      "fold": 4,
+      "frozen_test_cases": 8,
+      "relative_path": "tasks/mattext_coordinate_category_alpha_0p6/fold_4",
+      "source_task": "mattext_bulk_modulus_log10_gpa",
+      "static_cases": 256,
+      "task": "mattext_coordinate_category_alpha_0p6"
+    },
+    {
+      "alpha": 0.8,
+      "coordinate_weight": 0.19999999999999996,
+      "exposure_cases": 16,
+      "fold": 4,
+      "frozen_test_cases": 8,
+      "relative_path": "tasks/mattext_coordinate_category_alpha_0p8/fold_4",
+      "source_task": "mattext_bulk_modulus_log10_gpa",
+      "static_cases": 256,
+      "task": "mattext_coordinate_category_alpha_0p8"
+    },
+    {
+      "alpha": 1.0,
+      "coordinate_weight": 0.0,
+      "exposure_cases": 16,
+      "fold": 4,
+      "frozen_test_cases": 8,
+      "relative_path": "tasks/mattext_coordinate_category_alpha_1p0/fold_4",
+      "source_task": "mattext_bulk_modulus_log10_gpa",
+      "static_cases": 256,
+      "task": "mattext_coordinate_category_alpha_1p0"
+    }
+  ],
+  "tasks": [
+    "mattext_coordinate_category_alpha_0p0",
+    "mattext_coordinate_category_alpha_0p2",
+    "mattext_coordinate_category_alpha_0p4",
+    "mattext_coordinate_category_alpha_0p5",
+    "mattext_coordinate_category_alpha_0p6",
+    "mattext_coordinate_category_alpha_0p8",
+    "mattext_coordinate_category_alpha_1p0"
+  ]
+}

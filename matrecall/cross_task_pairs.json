@@ -1,0 +1,70 @@
+{
+  "protocol": "matrecall-cross-task-pairs",
+  "selection_rule": "Pairs were registered before cross-task predictions. Related pairs share an input domain and a physical or procedural mechanism; unrelated controls retain a compatible scalar or structured prediction setting when possible.",
+  "pairs": [
+    {
+      "target_task": "bulk_modulus_kv",
+      "related_source_task": "formation_energy_peratom",
+      "unrelated_source_task": "mbj_bandgap",
+      "stratum": "primary_schema_matched",
+      "group_namespace": "chemical_system",
+      "rationale": "All three use the same crystal-structure input and scalar output; formation energy and elastic stiffness share stability/bonding mechanisms, whereas band gap is an electronic-property control."
+    },
+    {
+      "target_task": "formation_energy_peratom",
+      "related_source_task": "bulk_modulus_kv",
+      "unrelated_source_task": "mbj_bandgap",
+      "stratum": "primary_schema_matched",
+      "group_namespace": "chemical_system",
+      "rationale": "All three use the same crystal-structure input and scalar output; elastic stiffness is the stability-related source and band gap is the electronic-property control."
+    },
+    {
+      "target_task": "mbj_bandgap",
+      "related_source_task": "optb88vdw_bandgap",
+      "unrelated_source_task": "bulk_modulus_kv",
+      "stratum": "primary_schema_matched",
+      "group_namespace": "chemical_system",
+      "rationale": "The related source predicts the same physical quantity with a different electronic-structure method; bulk modulus preserves crystal/scalar schema but changes the physical target."
+    },
+    {
+      "target_task": "optb88vdw_bandgap",
+      "related_source_task": "mbj_bandgap",
+      "unrelated_source_task": "bulk_modulus_kv",
+      "stratum": "primary_schema_matched",
+      "group_namespace": "chemical_system",
+      "rationale": "The related source predicts the same physical quantity with a different electronic-structure method; bulk modulus preserves crystal/scalar schema but changes the physical target."
+    },
+    {
+      "target_task": "composition_to_phase_assemblage",
+      "related_source_task": "composition_crystal_system_context_to_space_group",
+      "unrelated_source_task": "mbj_bandgap",
+      "stratum": "exploratory_cross_schema",
+      "group_namespace": "chemical_system",
+      "rationale": "The related source transfers composition-to-crystallographic-class experience; MBJ band gap is a chemical-system-grouped but domain- and output-mismatched electronic-property control."
+    },
+    {
+      "target_task": "composition_crystal_system_context_to_space_group",
+      "related_source_task": "composition_to_phase_assemblage",
+      "unrelated_source_task": "mbj_bandgap",
+      "stratum": "exploratory_cross_schema",
+      "group_namespace": "chemical_system",
+      "rationale": "The related source transfers composition-to-phase-class experience; MBJ band gap is a chemical-system-grouped but domain- and output-mismatched electronic-property control."
+    },
+    {
+      "target_task": "target_and_precursors_to_heating_conditions",
+      "related_source_task": "target_and_precursors_to_operations_and_conditions",
+      "unrelated_source_task": "mbj_bandgap",
+      "stratum": "exploratory_cross_schema",
+      "group_namespace": "doi",
+      "rationale": "The related source shares target/precursor inputs and contains heating operations; the unrelated source is a deliberately domain-mismatched crystal electronic-property control."
+    },
+    {
+      "target_task": "target_and_precursors_to_operations_and_conditions",
+      "related_source_task": "target_and_precursors_to_heating_conditions",
+      "unrelated_source_task": "mbj_bandgap",
+      "stratum": "exploratory_cross_schema",
+      "group_namespace": "doi",
+      "rationale": "The related source shares target/precursor inputs and verified heating conditions; the unrelated source is a deliberately domain-mismatched crystal electronic-property control."
+    }
+  ]
+}

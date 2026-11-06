@@ -1,0 +1,712 @@
+{
+  "created_at_utc": "2026-10-29T13:24:02.893053+00:00",
+  "exposure_method": "matrecall",
+  "exposure_release_id": "matrecall-online-adaptation",
+  "pair_config": {
+    "pairs": [
+      {
+        "group_namespace": "chemical_system",
+        "rationale": "All three use the same crystal-structure input and scalar output; formation energy and elastic stiffness share stability/bonding mechanisms, whereas band gap is an electronic-property control.",
+        "related_source_task": "formation_energy_peratom",
+        "stratum": "primary_schema_matched",
+        "target_task": "bulk_modulus_kv",
+        "unrelated_source_task": "mbj_bandgap"
+      },
+      {
+        "group_namespace": "chemical_system",
+        "rationale": "All three use the same crystal-structure input and scalar output; elastic stiffness is the stability-related source and band gap is the electronic-property control.",
+        "related_source_task": "bulk_modulus_kv",
+        "stratum": "primary_schema_matched",
+        "target_task": "formation_energy_peratom",
+        "unrelated_source_task": "mbj_bandgap"
+      },
+      {
+        "group_namespace": "chemical_system",
+        "rationale": "The related source predicts the same physical quantity with a different electronic-structure method; bulk modulus preserves crystal/scalar schema but changes the physical target.",
+        "related_source_task": "optb88vdw_bandgap",
+        "stratum": "primary_schema_matched",
+        "target_task": "mbj_bandgap",
+        "unrelated_source_task": "bulk_modulus_kv"
+      },
+      {
+        "group_namespace": "chemical_system",
+        "rationale": "The related source predicts the same physical quantity with a different electronic-structure method; bulk modulus preserves crystal/scalar schema but changes the physical target.",
+        "related_source_task": "mbj_bandgap",
+        "stratum": "primary_schema_matched",
+        "target_task": "optb88vdw_bandgap",
+        "unrelated_source_task": "bulk_modulus_kv"
+      },
+      {
+        "group_namespace": "chemical_system",
+        "rationale": "The related source transfers composition-to-crystallographic-class experience; MBJ band gap is a chemical-system-grouped but domain- and output-mismatched electronic-property control.",
+        "related_source_task": "composition_crystal_system_context_to_space_group",
+        "stratum": "exploratory_cross_schema",
+        "target_task": "composition_to_phase_assemblage",
+        "unrelated_source_task": "mbj_bandgap"
+      },
+      {
+        "group_namespace": "chemical_system",
+        "rationale": "The related source transfers composition-to-phase-class experience; MBJ band gap is a chemical-system-grouped but domain- and output-mismatched electronic-property control.",
+        "related_source_task": "composition_to_phase_assemblage",
+        "stratum": "exploratory_cross_schema",
+        "target_task": "composition_crystal_system_context_to_space_group",
+        "unrelated_source_task": "mbj_bandgap"
+      },
+      {
+        "group_namespace": "doi",
+        "rationale": "The related source shares target/precursor inputs and contains heating operations; the unrelated source is a deliberately domain-mismatched crystal electronic-property control.",
+        "related_source_task": "target_and_precursors_to_operations_and_conditions",
+        "stratum": "exploratory_cross_schema",
+        "target_task": "target_and_precursors_to_heating_conditions",
+        "unrelated_source_task": "mbj_bandgap"
+      },
+      {
+        "group_namespace": "doi",
+        "rationale": "The related source shares target/precursor inputs and verified heating conditions; the unrelated source is a deliberately domain-mismatched crystal electronic-property control.",
+        "related_source_task": "target_and_precursors_to_heating_conditions",
+        "stratum": "exploratory_cross_schema",
+        "target_task": "target_and_precursors_to_operations_and_conditions",
+        "unrelated_source_task": "mbj_bandgap"
+      }
+    ],
+    "protocol": "matrecall-cross-task-pairs",
+    "selection_rule": "Pairs were registered before cross-task predictions. Related pairs share an input domain and a physical or procedural mechanism; unrelated controls retain a compatible scalar or structured prediction setting when possible."
+  },
+  "pair_count": 16,
+  "protocol": {
+    "exploratory_cross_schema_pairs_are_separately_labelled": true,
+    "group_disjointness_is_enforced_when_source_and_target_share_the_registered_namespace": true,
+    "memory_is_read_only": true,
+    "noncomparable_domain_mismatched_controls_are_explicitly_marked": true,
+    "pairs_registered_before_prediction": true,
+    "related_and_unrelated_use_identical_target_cases": true,
+    "selection_uses_no_target_values": true,
+    "target_queries_have_no_exact_visible_query_match_in_either_source": true,
+    "transfer_feedback_reveals": 0
+  },
+  "provenance": {
+    "builder_sha256": "d71bc9bba47ecb22a7f2f56462f9e5e02c2ff0285075e5ccf25698395a1946b2",
+    "exposure_completion_sha256": "530eb230fc1120fe75b6cb063ca506600392ec9955bc55f0b844aa65c86a6ba3",
+    "exposure_manifest_sha256": "b66bf65495f1f0e4d957437e28729cabf7cc84bcc16d995e3f1bcd3da3f3fca0",
+    "pair_config_sha256": "de3411a88372d3f3ef4abf6a071b2b96e97b0d221dcc0311f0a097a8b2543750",
+    "target_manifest_sha256": "476f1eca1e7a6b88815966e8046d9c44cce5d04e9635ed5174a3680184b2817e"
+  },
+  "release_id": "matrecall-cross-task-transfer",
+  "selection_revision": "related-unrelated-pairs",
+  "status": "frozen",
+  "target_pairs": [
+    {
+      "excluded_exact_query_overlap": 0,
+      "excluded_source_group_overlap": 2,
+      "family": "unified",
+      "group_comparable_relations": [
+        "related",
+        "unrelated"
+      ],
+      "group_namespace": "chemical_system",
+      "jointly_disjoint_target_cases": 30,
+      "rationale": "All three use the same crystal-structure input and scalar output; formation energy and elastic stiffness share stability/bonding mechanisms, whereas band gap is an electronic-property control.",
+      "related_source_task": "formation_energy_peratom",
+      "source_target_cases": 32,
+      "stratum": "primary_schema_matched",
+      "target_case_set_sha256": "1c5debbb4f52a1f69f4b90a7fe8f63d3dc7d914f0b31247b86ac65eff2a74cf4",
+      "target_task": "bulk_modulus_kv",
+      "unrelated_source_task": "mbj_bandgap"
+    },
+    {
+      "excluded_exact_query_overlap": 0,
+      "excluded_source_group_overlap": 0,
+      "family": "unified",
+      "group_comparable_relations": [
+        "related",
+        "unrelated"
+      ],
+      "group_namespace": "chemical_system",
+      "jointly_disjoint_target_cases": 32,
+      "rationale": "All three use the same crystal-structure input and scalar output; elastic stiffness is the stability-related source and band gap is the electronic-property control.",
+      "related_source_task": "bulk_modulus_kv",
+      "source_target_cases": 32,
+      "stratum": "primary_schema_matched",
+      "target_case_set_sha256": "8a4f077eee1c60f2c550ee9c38baf0c5c3f05cf5660b26505bf293f7be91b981",
+      "target_task": "formation_energy_peratom",
+      "unrelated_source_task": "mbj_bandgap"
+    },
+    {
+      "excluded_exact_query_overlap": 0,
+      "excluded_source_group_overlap": 0,
+      "family": "unified",
+      "group_comparable_relations": [
+        "related",
+        "unrelated"
+      ],
+      "group_namespace": "chemical_system",
+      "jointly_disjoint_target_cases": 32,
+      "rationale": "The related source predicts the same physical quantity with a different electronic-structure method; bulk modulus preserves crystal/scalar schema but changes the physical target.",
+      "related_source_task": "optb88vdw_bandgap",
+      "source_target_cases": 32,
+      "stratum": "primary_schema_matched",
+      "target_case_set_sha256": "452113e0f17092166a1b4d2260c41c4d9f39793b7cb596ef5dd0a4da8c71d0b9",
+      "target_task": "mbj_bandgap",
+      "unrelated_source_task": "bulk_modulus_kv"
+    },
+    {
+      "excluded_exact_query_overlap": 0,
+      "excluded_source_group_overlap": 0,
+      "family": "unified",
+      "group_comparable_relations": [
+        "related",
+        "unrelated"
+      ],
+      "group_namespace": "chemical_system",
+      "jointly_disjoint_target_cases": 32,
+      "rationale": "The related source predicts the same physical quantity with a different electronic-structure method; bulk modulus preserves crystal/scalar schema but changes the physical target.",
+      "related_source_task": "mbj_bandgap",
+      "source_target_cases": 32,
+      "stratum": "primary_schema_matched",
+      "target_case_set_sha256": "f74ddca553616f4c3bf4866a8a1127bb15e1970f4a8848ebecb25090ead640fc",
+      "target_task": "optb88vdw_bandgap",
+      "unrelated_source_task": "bulk_modulus_kv"
+    },
+    {
+      "excluded_exact_query_overlap": 0,
+      "excluded_source_group_overlap": 0,
+      "family": "unified",
+      "group_comparable_relations": [
+        "related",
+        "unrelated"
+      ],
+      "group_namespace": "chemical_system",
+      "jointly_disjoint_target_cases": 32,
+      "rationale": "The related source transfers composition-to-crystallographic-class experience; MBJ band gap is a chemical-system-grouped but domain- and output-mismatched electronic-property control.",
+      "related_source_task": "composition_crystal_system_context_to_space_group",
+      "source_target_cases": 32,
+      "stratum": "exploratory_cross_schema",
+      "target_case_set_sha256": "3e7cca85858b80acbe023d8598e330cd75dacc7939977cd194bfccf8e49ce00f",
+      "target_task": "composition_to_phase_assemblage",
+      "unrelated_source_task": "mbj_bandgap"
+    },
+    {
+      "excluded_exact_query_overlap": 0,
+      "excluded_source_group_overlap": 0,
+      "family": "unified",
+      "group_comparable_relations": [
+        "related",
+        "unrelated"
+      ],
+      "group_namespace": "chemical_system",
+      "jointly_disjoint_target_cases": 32,
+      "rationale": "The related source transfers composition-to-phase-class experience; MBJ band gap is a chemical-system-grouped but domain- and output-mismatched electronic-property control.",
+      "related_source_task": "composition_to_phase_assemblage",
+      "source_target_cases": 32,
+      "stratum": "exploratory_cross_schema",
+      "target_case_set_sha256": "903b1e0a281ffb28c81da630c499547d2b8ff9d8ac786d882ddd9f2276076463",
+      "target_task": "composition_crystal_system_context_to_space_group",
+      "unrelated_source_task": "mbj_bandgap"
+    },
+    {
+      "excluded_exact_query_overlap": 0,
+      "excluded_source_group_overlap": 0,
+      "family": "unified",
+      "group_comparable_relations": [
+        "related"
+      ],
+      "group_namespace": "doi",
+      "jointly_disjoint_target_cases": 32,
+      "rationale": "The related source shares target/precursor inputs and contains heating operations; the unrelated source is a deliberately domain-mismatched crystal electronic-property control.",
+      "related_source_task": "target_and_precursors_to_operations_and_conditions",
+      "source_target_cases": 32,
+      "stratum": "exploratory_cross_schema",
+      "target_case_set_sha256": "d7d790dc5b138fc38228e7fa2d135abf1c386c05c3e93da098c4711e829f453e",
+      "target_task": "target_and_precursors_to_heating_conditions",
+      "unrelated_source_task": "mbj_bandgap"
+    },
+    {
+      "excluded_exact_query_overlap": 0,
+      "excluded_source_group_overlap": 0,
+      "family": "unified",
+      "group_comparable_relations": [
+        "related"
+      ],
+      "group_namespace": "doi",
+      "jointly_disjoint_target_cases": 13,
+      "rationale": "The related source shares target/precursor inputs and verified heating conditions; the unrelated source is a deliberately domain-mismatched crystal electronic-property control.",
+      "related_source_task": "target_and_precursors_to_heating_conditions",
+      "source_target_cases": 13,
+      "stratum": "exploratory_cross_schema",
+      "target_case_set_sha256": "b8c3feb0540313328d32a213768578eba5d2bc23153f0abf39ac66c5c19c251d",
+      "target_task": "target_and_precursors_to_operations_and_conditions",
+      "unrelated_source_task": "mbj_bandgap"
+    }
+  ],
+  "target_release_id": "matrecall-memory-retention",
+  "target_task_count": 8,
+  "task_count": 16,
+  "tasks": [
+    {
+      "cases_sha256": "611ac6f7e218d558c25e29074e8360ad7c7fdd50a6348a50a2aebd1bd368ccfd",
+      "cross_task_group_overlap_checked": true,
+      "family": "unified",
+      "frozen_memory_sha256": "a849ce0f1a0de89784be92b448c26eeea87728c6cd4b1cdcb5c9d006775568b3",
+      "gold_sha256": "b3dfc546753e891302660fd550f9ecfc8bf1f12e46d196a44b227d63a4cf8a25",
+      "group_namespace": "chemical_system",
+      "memory_cases": 48,
+      "memory_relation": "related",
+      "pair_id": "formation_energy_peratom__to__bulk_modulus_kv__related",
+      "rationale": "All three use the same crystal-structure input and scalar output; formation energy and elastic stiffness share stability/bonding mechanisms, whereas band gap is an electronic-property control.",
+      "relative_path": "pairs/bulk_modulus_kv/related",
+      "source_memory_family": "unified",
+      "source_memory_group_namespaces": [
+        "chemical_system"
+      ],
+      "source_memory_group_sources": [
+        "chemical_system"
+      ],
+      "source_task": "formation_energy_peratom",
+      "stratum": "primary_schema_matched",
+      "target_case_set_sha256": "1c5debbb4f52a1f69f4b90a7fe8f63d3dc7d914f0b31247b86ac65eff2a74cf4",
+      "target_task": "bulk_modulus_kv",
+      "task": "bulk_modulus_kv",
+      "task_kind": "scalar_regression",
+      "transfer_cases": 30,
+      "transfer_groups": 30,
+      "transfer_index_sha256": "37a04d344b4e5a4a8e89138a05f16a941a57839f391db6d4a50fe5fbbdae9644"
+    },
+    {
+      "cases_sha256": "611ac6f7e218d558c25e29074e8360ad7c7fdd50a6348a50a2aebd1bd368ccfd",
+      "cross_task_group_overlap_checked": true,
+      "family": "unified",
+      "frozen_memory_sha256": "1a2763d9f53eb3a8e493450853292937e655493b2cb1e8717929560d6d9e5a16",
+      "gold_sha256": "b3dfc546753e891302660fd550f9ecfc8bf1f12e46d196a44b227d63a4cf8a25",
+      "group_namespace": "chemical_system",
+      "memory_cases": 48,
+      "memory_relation": "unrelated",
+      "pair_id": "mbj_bandgap__to__bulk_modulus_kv__unrelated",
+      "rationale": "All three use the same crystal-structure input and scalar output; formation energy and elastic stiffness share stability/bonding mechanisms, whereas band gap is an electronic-property control.",
+      "relative_path": "pairs/bulk_modulus_kv/unrelated",
+      "source_memory_family": "unified",
+      "source_memory_group_namespaces": [
+        "chemical_system"
+      ],
+      "source_memory_group_sources": [
+        "chemical_system"
+      ],
+      "source_task": "mbj_bandgap",
+      "stratum": "primary_schema_matched",
+      "target_case_set_sha256": "1c5debbb4f52a1f69f4b90a7fe8f63d3dc7d914f0b31247b86ac65eff2a74cf4",
+      "target_task": "bulk_modulus_kv",
+      "task": "bulk_modulus_kv",
+      "task_kind": "scalar_regression",
+      "transfer_cases": 30,
+      "transfer_groups": 30,
+      "transfer_index_sha256": "774574a15f5598478f7d0437ff7af23028702da489969727c1e379546d4520c2"
+    },
+    {
+      "cases_sha256": "7a279d40d700ce75127657c4cbbfbb95e05a88ade498b248ba16f4e77972396d",
+      "cross_task_group_overlap_checked": true,
+      "family": "unified",
+      "frozen_memory_sha256": "d6f782ce3a2b5d62362f6314366c6c27fb90a4dc5cdb3a0ff5b8b946af73c85d",
+      "gold_sha256": "87c31439f4bcc6902068b4dee522f6eee1a2454692e6ca96e064b818834c026a",
+      "group_namespace": "chemical_system",
+      "memory_cases": 48,
+      "memory_relation": "related",
+      "pair_id": "bulk_modulus_kv__to__formation_energy_peratom__related",
+      "rationale": "All three use the same crystal-structure input and scalar output; elastic stiffness is the stability-related source and band gap is the electronic-property control.",
+      "relative_path": "pairs/formation_energy_peratom/related",
+      "source_memory_family": "unified",
+      "source_memory_group_namespaces": [
+        "chemical_system"
+      ],
+      "source_memory_group_sources": [
+        "chemical_system"
+      ],
+      "source_task": "bulk_modulus_kv",
+      "stratum": "primary_schema_matched",
+      "target_case_set_sha256": "8a4f077eee1c60f2c550ee9c38baf0c5c3f05cf5660b26505bf293f7be91b981",
+      "target_task": "formation_energy_peratom",
+      "task": "formation_energy_peratom",
+      "task_kind": "scalar_regression",
+      "transfer_cases": 32,
+      "transfer_groups": 32,
+      "transfer_index_sha256": "8629d8906c241182b589b46311c56c60b9f4a985b57f80a143a142b231212746"
+    },
+    {
+      "cases_sha256": "7a279d40d700ce75127657c4cbbfbb95e05a88ade498b248ba16f4e77972396d",
+      "cross_task_group_overlap_checked": true,
+      "family": "unified",
+      "frozen_memory_sha256": "1a2763d9f53eb3a8e493450853292937e655493b2cb1e8717929560d6d9e5a16",
+      "gold_sha256": "87c31439f4bcc6902068b4dee522f6eee1a2454692e6ca96e064b818834c026a",
+      "group_namespace": "chemical_system",
+      "memory_cases": 48,
+      "memory_relation": "unrelated",
+      "pair_id": "mbj_bandgap__to__formation_energy_peratom__unrelated",
+      "rationale": "All three use the same crystal-structure input and scalar output; elastic stiffness is the stability-related source and band gap is the electronic-property control.",
+      "relative_path": "pairs/formation_energy_peratom/unrelated",
+      "source_memory_family": "unified",
+      "source_memory_group_namespaces": [
+        "chemical_system"
+      ],
+      "source_memory_group_sources": [
+        "chemical_system"
+      ],
+      "source_task": "mbj_bandgap",
+      "stratum": "primary_schema_matched",
+      "target_case_set_sha256": "8a4f077eee1c60f2c550ee9c38baf0c5c3f05cf5660b26505bf293f7be91b981",
+      "target_task": "formation_energy_peratom",
+      "task": "formation_energy_peratom",
+      "task_kind": "scalar_regression",
+      "transfer_cases": 32,
+      "transfer_groups": 32,
+      "transfer_index_sha256": "bb33616d0d0499170cfa12e4da1f5e395ea8a87543018133959c5cfbdb936f5c"
+    },
+    {
+      "cases_sha256": "44145a0146a161d7a9e55e9fa36edfe3dc8cf8d36ba2c0a7747250019c28a257",
+      "cross_task_group_overlap_checked": true,
+      "family": "unified",
+      "frozen_memory_sha256": "332509caed96cfd107504fd983cecd130a9fd4b98abaac5f4912944339ecdeee",
+      "gold_sha256": "3506183b9cff20ba4251ff61f02130494d70fda94bb407adfd2e402ecfec8046",
+      "group_namespace": "chemical_system",
+      "memory_cases": 48,
+      "memory_relation": "related",
+      "pair_id": "optb88vdw_bandgap__to__mbj_bandgap__related",
+      "rationale": "The related source predicts the same physical quantity with a different electronic-structure method; bulk modulus preserves crystal/scalar schema but changes the physical target.",
+      "relative_path": "pairs/mbj_bandgap/related",
+      "source_memory_family": "unified",
+      "source_memory_group_namespaces": [
+        "chemical_system"
+      ],
+      "source_memory_group_sources": [
+        "chemical_system"
+      ],
+      "source_task": "optb88vdw_bandgap",
+      "stratum": "primary_schema_matched",
+      "target_case_set_sha256": "452113e0f17092166a1b4d2260c41c4d9f39793b7cb596ef5dd0a4da8c71d0b9",
+      "target_task": "mbj_bandgap",
+      "task": "mbj_bandgap",
+      "task_kind": "scalar_regression",
+      "transfer_cases": 32,
+      "transfer_groups": 32,
+      "transfer_index_sha256": "7eabda5a08711a1300637bf3c72152687ec516970679997820850dfae225bc55"
+    },
+    {
+      "cases_sha256": "44145a0146a161d7a9e55e9fa36edfe3dc8cf8d36ba2c0a7747250019c28a257",
+      "cross_task_group_overlap_checked": true,
+      "family": "unified",
+      "frozen_memory_sha256": "d6f782ce3a2b5d62362f6314366c6c27fb90a4dc5cdb3a0ff5b8b946af73c85d",
+      "gold_sha256": "3506183b9cff20ba4251ff61f02130494d70fda94bb407adfd2e402ecfec8046",
+      "group_namespace": "chemical_system",
+      "memory_cases": 48,
+      "memory_relation": "unrelated",
+      "pair_id": "bulk_modulus_kv__to__mbj_bandgap__unrelated",
+      "rationale": "The related source predicts the same physical quantity with a different electronic-structure method; bulk modulus preserves crystal/scalar schema but changes the physical target.",
+      "relative_path": "pairs/mbj_bandgap/unrelated",
+      "source_memory_family": "unified",
+      "source_memory_group_namespaces": [
+        "chemical_system"
+      ],
+      "source_memory_group_sources": [
+        "chemical_system"
+      ],
+      "source_task": "bulk_modulus_kv",
+      "stratum": "primary_schema_matched",
+      "target_case_set_sha256": "452113e0f17092166a1b4d2260c41c4d9f39793b7cb596ef5dd0a4da8c71d0b9",
+      "target_task": "mbj_bandgap",
+      "task": "mbj_bandgap",
+      "task_kind": "scalar_regression",
+      "transfer_cases": 32,
+      "transfer_groups": 32,
+      "transfer_index_sha256": "8d93e03a5726cd9e88d5f500f24608b10807f443f6728182e97c83404ab61697"
+    },
+    {
+      "cases_sha256": "22517859592e8fbf0b3a915ad4bb819fbb6577b487ce403a601b2b7d0b884f97",
+      "cross_task_group_overlap_checked": true,
+      "family": "unified",
+      "frozen_memory_sha256": "1a2763d9f53eb3a8e493450853292937e655493b2cb1e8717929560d6d9e5a16",
+      "gold_sha256": "eb531f3ba3bce813f2bc84875c4a81a80897b532f035c50d68927efda3ffb91d",
+      "group_namespace": "chemical_system",
+      "memory_cases": 48,
+      "memory_relation": "related",
+      "pair_id": "mbj_bandgap__to__optb88vdw_bandgap__related",
+      "rationale": "The related source predicts the same physical quantity with a different electronic-structure method; bulk modulus preserves crystal/scalar schema but changes the physical target.",
+      "relative_path": "pairs/optb88vdw_bandgap/related",
+      "source_memory_family": "unified",
+      "source_memory_group_namespaces": [
+        "chemical_system"
+      ],
+      "source_memory_group_sources": [
+        "chemical_system"
+      ],
+      "source_task": "mbj_bandgap",
+      "stratum": "primary_schema_matched",
+      "target_case_set_sha256": "f74ddca553616f4c3bf4866a8a1127bb15e1970f4a8848ebecb25090ead640fc",
+      "target_task": "optb88vdw_bandgap",
+      "task": "optb88vdw_bandgap",
+      "task_kind": "scalar_regression",
+      "transfer_cases": 32,
+      "transfer_groups": 32,
+      "transfer_index_sha256": "55e0ed431e206fc3392710e5484586189f0bd4e3486f00894658fdca0e54bd9b"
+    },
+    {
+      "cases_sha256": "22517859592e8fbf0b3a915ad4bb819fbb6577b487ce403a601b2b7d0b884f97",
+      "cross_task_group_overlap_checked": true,
+      "family": "unified",
+      "frozen_memory_sha256": "d6f782ce3a2b5d62362f6314366c6c27fb90a4dc5cdb3a0ff5b8b946af73c85d",
+      "gold_sha256": "eb531f3ba3bce813f2bc84875c4a81a80897b532f035c50d68927efda3ffb91d",
+      "group_namespace": "chemical_system",
+      "memory_cases": 48,
+      "memory_relation": "unrelated",
+      "pair_id": "bulk_modulus_kv__to__optb88vdw_bandgap__unrelated",
+      "rationale": "The related source predicts the same physical quantity with a different electronic-structure method; bulk modulus preserves crystal/scalar schema but changes the physical target.",
+      "relative_path": "pairs/optb88vdw_bandgap/unrelated",
+      "source_memory_family": "unified",
+      "source_memory_group_namespaces": [
+        "chemical_system"
+      ],
+      "source_memory_group_sources": [
+        "chemical_system"
+      ],
+      "source_task": "bulk_modulus_kv",
+      "stratum": "primary_schema_matched",
+      "target_case_set_sha256": "f74ddca553616f4c3bf4866a8a1127bb15e1970f4a8848ebecb25090ead640fc",
+      "target_task": "optb88vdw_bandgap",
+      "task": "optb88vdw_bandgap",
+      "task_kind": "scalar_regression",
+      "transfer_cases": 32,
+      "transfer_groups": 32,
+      "transfer_index_sha256": "25eff2a090dd3e0689b04afa84f1a7d07e2fd8a108a1639dc18d2a911a2357e1"
+    },
+    {
+      "cases_sha256": "2b598e72fdb8206978f309e947a4e1a3884b989678e247f803f33356ed6e02fb",
+      "cross_task_group_overlap_checked": true,
+      "family": "unified",
+      "frozen_memory_sha256": "257171d2497e3c5a8f3cad5bc592264cc614abfd37935bfc7003d7551b5cad6f",
+      "gold_sha256": "b0ee26a33aa9e777af22142759481236cc0d597c93f51419fd33c435b6936844",
+      "group_namespace": "chemical_system",
+      "memory_cases": 48,
+      "memory_relation": "related",
+      "pair_id": "composition_crystal_system_context_to_space_group__to__composition_to_phase_assemblage__related",
+      "rationale": "The related source transfers composition-to-crystallographic-class experience; MBJ band gap is a chemical-system-grouped but domain- and output-mismatched electronic-property control.",
+      "relative_path": "pairs/composition_to_phase_assemblage/related",
+      "source_memory_family": "unified",
+      "source_memory_group_namespaces": [
+        "chemical_system"
+      ],
+      "source_memory_group_sources": [
+        "chemical_system"
+      ],
+      "source_task": "composition_crystal_system_context_to_space_group",
+      "stratum": "exploratory_cross_schema",
+      "target_case_set_sha256": "3e7cca85858b80acbe023d8598e330cd75dacc7939977cd194bfccf8e49ce00f",
+      "target_task": "composition_to_phase_assemblage",
+      "task": "composition_to_phase_assemblage",
+      "task_kind": "set_classification",
+      "transfer_cases": 32,
+      "transfer_groups": 32,
+      "transfer_index_sha256": "0d13af053c6af5744430a3e0f456694eea15e5abf7bb087e2e64ddb4d51f77a6"
+    },
+    {
+      "cases_sha256": "2b598e72fdb8206978f309e947a4e1a3884b989678e247f803f33356ed6e02fb",
+      "cross_task_group_overlap_checked": true,
+      "family": "unified",
+      "frozen_memory_sha256": "1a2763d9f53eb3a8e493450853292937e655493b2cb1e8717929560d6d9e5a16",
+      "gold_sha256": "b0ee26a33aa9e777af22142759481236cc0d597c93f51419fd33c435b6936844",
+      "group_namespace": "chemical_system",
+      "memory_cases": 48,
+      "memory_relation": "unrelated",
+      "pair_id": "mbj_bandgap__to__composition_to_phase_assemblage__unrelated",
+      "rationale": "The related source transfers composition-to-crystallographic-class experience; MBJ band gap is a chemical-system-grouped but domain- and output-mismatched electronic-property control.",
+      "relative_path": "pairs/composition_to_phase_assemblage/unrelated",
+      "source_memory_family": "unified",
+      "source_memory_group_namespaces": [
+        "chemical_system"
+      ],
+      "source_memory_group_sources": [
+        "chemical_system"
+      ],
+      "source_task": "mbj_bandgap",
+      "stratum": "exploratory_cross_schema",
+      "target_case_set_sha256": "3e7cca85858b80acbe023d8598e330cd75dacc7939977cd194bfccf8e49ce00f",
+      "target_task": "composition_to_phase_assemblage",
+      "task": "composition_to_phase_assemblage",
+      "task_kind": "set_classification",
+      "transfer_cases": 32,
+      "transfer_groups": 32,
+      "transfer_index_sha256": "7911ca256e21b51266daf0f2e8cefcd17f60a0fff95fabacd4da77a5135a002d"
+    },
+    {
+      "cases_sha256": "2c5e32c55747bb0a8519d3a663cbde665775a448f296f1f6f3754efa7c1f3bcb",
+      "cross_task_group_overlap_checked": true,
+      "family": "unified",
+      "frozen_memory_sha256": "5c5d7f831f7fe7134c9d0232e244babd21dd197e5b75c68f3d99ece5a350823f",
+      "gold_sha256": "4db960c45141cd2dc1a9ed215502fbe36c8e91a51a4f008866b17b75eb12bc2a",
+      "group_namespace": "chemical_system",
+      "memory_cases": 48,
+      "memory_relation": "related",
+      "pair_id": "composition_to_phase_assemblage__to__composition_crystal_system_context_to_space_group__related",
+      "rationale": "The related source transfers composition-to-phase-class experience; MBJ band gap is a chemical-system-grouped but domain- and output-mismatched electronic-property control.",
+      "relative_path": "pairs/composition_crystal_system_context_to_space_group/related",
+      "source_memory_family": "unified",
+      "source_memory_group_namespaces": [
+        "chemical_system"
+      ],
+      "source_memory_group_sources": [
+        "chemical_system"
+      ],
+      "source_task": "composition_to_phase_assemblage",
+      "stratum": "exploratory_cross_schema",
+      "target_case_set_sha256": "903b1e0a281ffb28c81da630c499547d2b8ff9d8ac786d882ddd9f2276076463",
+      "target_task": "composition_crystal_system_context_to_space_group",
+      "task": "composition_crystal_system_context_to_space_group",
+      "task_kind": "ranked_classification",
+      "transfer_cases": 32,
+      "transfer_groups": 32,
+      "transfer_index_sha256": "b45144276b38e5d47d0822dcb3f946d7ef7e8fdbd44a8789104ae0c19965cdd1"
+    },
+    {
+      "cases_sha256": "2c5e32c55747bb0a8519d3a663cbde665775a448f296f1f6f3754efa7c1f3bcb",
+      "cross_task_group_overlap_checked": true,
+      "family": "unified",
+      "frozen_memory_sha256": "1a2763d9f53eb3a8e493450853292937e655493b2cb1e8717929560d6d9e5a16",
+      "gold_sha256": "4db960c45141cd2dc1a9ed215502fbe36c8e91a51a4f008866b17b75eb12bc2a",
+      "group_namespace": "chemical_system",
+      "memory_cases": 48,
+      "memory_relation": "unrelated",
+      "pair_id": "mbj_bandgap__to__composition_crystal_system_context_to_space_group__unrelated",
+      "rationale": "The related source transfers composition-to-phase-class experience; MBJ band gap is a chemical-system-grouped but domain- and output-mismatched electronic-property control.",
+      "relative_path": "pairs/composition_crystal_system_context_to_space_group/unrelated",
+      "source_memory_family": "unified",
+      "source_memory_group_namespaces": [
+        "chemical_system"
+      ],
+      "source_memory_group_sources": [
+        "chemical_system"
+      ],
+      "source_task": "mbj_bandgap",
+      "stratum": "exploratory_cross_schema",
+      "target_case_set_sha256": "903b1e0a281ffb28c81da630c499547d2b8ff9d8ac786d882ddd9f2276076463",
+      "target_task": "composition_crystal_system_context_to_space_group",
+      "task": "composition_crystal_system_context_to_space_group",
+      "task_kind": "ranked_classification",
+      "transfer_cases": 32,
+      "transfer_groups": 32,
+      "transfer_index_sha256": "ee6d6eea03f978d50d9d92fa87bfcb4fa7163e4adbcb15955b2532fe46227140"
+    },
+    {
+      "cases_sha256": "d71d9406b60eb2bd187c8ee93df9503cd4ef3109220fdaa19368faf4a4ef6345",
+      "cross_task_group_overlap_checked": true,
+      "family": "unified",
+      "frozen_memory_sha256": "7d46b6be9c428110c5097aa225c477f6d864d079f765d1ce2909c53bbd8e7651",
+      "gold_sha256": "6b2452c1161b4ee4bff8cb905b25695edb86a5c540fefcee8a3f31a7abab99d9",
+      "group_namespace": "doi",
+      "memory_cases": 48,
+      "memory_relation": "related",
+      "pair_id": "target_and_precursors_to_operations_and_conditions__to__target_and_precursors_to_heating_conditions__related",
+      "rationale": "The related source shares target/precursor inputs and contains heating operations; the unrelated source is a deliberately domain-mismatched crystal electronic-property control.",
+      "relative_path": "pairs/target_and_precursors_to_heating_conditions/related",
+      "source_memory_family": "unified",
+      "source_memory_group_namespaces": [
+        "doi"
+      ],
+      "source_memory_group_sources": [
+        "query_metadata.source_doi"
+      ],
+      "source_task": "target_and_precursors_to_operations_and_conditions",
+      "stratum": "exploratory_cross_schema",
+      "target_case_set_sha256": "d7d790dc5b138fc38228e7fa2d135abf1c386c05c3e93da098c4711e829f453e",
+      "target_task": "target_and_precursors_to_heating_conditions",
+      "task": "target_and_precursors_to_heating_conditions",
+      "task_kind": "nullable_numeric_object",
+      "transfer_cases": 32,
+      "transfer_groups": 32,
+      "transfer_index_sha256": "de72fc48364460e213d5dc92a02db37bad681734a9fb789c754599278d377825"
+    },
+    {
+      "cases_sha256": "d71d9406b60eb2bd187c8ee93df9503cd4ef3109220fdaa19368faf4a4ef6345",
+      "cross_task_group_overlap_checked": false,
+      "family": "unified",
+      "frozen_memory_sha256": "1a2763d9f53eb3a8e493450853292937e655493b2cb1e8717929560d6d9e5a16",
+      "gold_sha256": "6b2452c1161b4ee4bff8cb905b25695edb86a5c540fefcee8a3f31a7abab99d9",
+      "group_namespace": "doi",
+      "memory_cases": 48,
+      "memory_relation": "unrelated",
+      "pair_id": "mbj_bandgap__to__target_and_precursors_to_heating_conditions__unrelated",
+      "rationale": "The related source shares target/precursor inputs and contains heating operations; the unrelated source is a deliberately domain-mismatched crystal electronic-property control.",
+      "relative_path": "pairs/target_and_precursors_to_heating_conditions/unrelated",
+      "source_memory_family": "unified",
+      "source_memory_group_namespaces": [
+        "chemical_system"
+      ],
+      "source_memory_group_sources": [
+        "chemical_system"
+      ],
+      "source_task": "mbj_bandgap",
+      "stratum": "exploratory_cross_schema",
+      "target_case_set_sha256": "d7d790dc5b138fc38228e7fa2d135abf1c386c05c3e93da098c4711e829f453e",
+      "target_task": "target_and_precursors_to_heating_conditions",
+      "task": "target_and_precursors_to_heating_conditions",
+      "task_kind": "nullable_numeric_object",
+      "transfer_cases": 32,
+      "transfer_groups": 32,
+      "transfer_index_sha256": "42a7647c10e5629db0f11e5e2b7809e0a2b0fab25d464a87270eab7f738d696e"
+    },
+    {
+      "cases_sha256": "17e77e5a7d5a5d17b4b6381c32425412097365c1ee80471822ac113639493c2e",
+      "cross_task_group_overlap_checked": true,
+      "family": "unified",
+      "frozen_memory_sha256": "08bd8e48db189f4ad77f39f781d507f30aab34dc8b11cb4694946d54329be712",
+      "gold_sha256": "f911f70b6564a5315278e6370c38f1ff991d49781ee8c1a67659989ed4b9c9bf",
+      "group_namespace": "doi",
+      "memory_cases": 48,
+      "memory_relation": "related",
+      "pair_id": "target_and_precursors_to_heating_conditions__to__target_and_precursors_to_operations_and_conditions__related",
+      "rationale": "The related source shares target/precursor inputs and verified heating conditions; the unrelated source is a deliberately domain-mismatched crystal electronic-property control.",
+      "relative_path": "pairs/target_and_precursors_to_operations_and_conditions/related",
+      "source_memory_family": "unified",
+      "source_memory_group_namespaces": [
+        "doi"
+      ],
+      "source_memory_group_sources": [
+        "query_metadata.source_doi"
+      ],
+      "source_task": "target_and_precursors_to_heating_conditions",
+      "stratum": "exploratory_cross_schema",
+      "target_case_set_sha256": "b8c3feb0540313328d32a213768578eba5d2bc23153f0abf39ac66c5c19c251d",
+      "target_task": "target_and_precursors_to_operations_and_conditions",
+      "task": "target_and_precursors_to_operations_and_conditions",
+      "task_kind": "operation_sequence",
+      "transfer_cases": 13,
+      "transfer_groups": 6,
+      "transfer_index_sha256": "6a821c91a335b4fa66adb565dfb240805143ff9f9688b903f9efff33b95c5c4b"
+    },
+    {
+      "cases_sha256": "17e77e5a7d5a5d17b4b6381c32425412097365c1ee80471822ac113639493c2e",
+      "cross_task_group_overlap_checked": false,
+      "family": "unified",
+      "frozen_memory_sha256": "1a2763d9f53eb3a8e493450853292937e655493b2cb1e8717929560d6d9e5a16",
+      "gold_sha256": "f911f70b6564a5315278e6370c38f1ff991d49781ee8c1a67659989ed4b9c9bf",
+      "group_namespace": "doi",
+      "memory_cases": 48,
+      "memory_relation": "unrelated",
+      "pair_id": "mbj_bandgap__to__target_and_precursors_to_operations_and_conditions__unrelated",
+      "rationale": "The related source shares target/precursor inputs and verified heating conditions; the unrelated source is a deliberately domain-mismatched crystal electronic-property control.",
+      "relative_path": "pairs/target_and_precursors_to_operations_and_conditions/unrelated",
+      "source_memory_family": "unified",
+      "source_memory_group_namespaces": [
+        "chemical_system"
+      ],
+      "source_memory_group_sources": [
+        "chemical_system"
+      ],
+      "source_task": "mbj_bandgap",
+      "stratum": "exploratory_cross_schema",
+      "target_case_set_sha256": "b8c3feb0540313328d32a213768578eba5d2bc23153f0abf39ac66c5c19c251d",
+      "target_task": "target_and_precursors_to_operations_and_conditions",
+      "task": "target_and_precursors_to_operations_and_conditions",
+      "task_kind": "operation_sequence",
+      "transfer_cases": 13,
+      "transfer_groups": 6,
+      "transfer_index_sha256": "015727bcc73cd7f681246d259cc14af4ba204255ab9ce1f28dcf2e6f66c016af"
+    }
+  ],
+  "transfer_cases": 470,
+  "unique_target_cases": 235
+}
